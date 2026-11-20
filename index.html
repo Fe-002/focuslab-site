@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FocusLab — исследовательский сайт о концентрации внимания студентов и цифровых привычках.">
+  <title>FocusLab — исследование концентрации</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#home"><span class="logo-mark">F</span> Focus<span>Lab</span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Открыть меню">☰</button>
+  <nav id="nav">
+    <a href="#project">О проекте</a><a href="#test">Тест</a><a href="#focus">Фокус-сессия</a><a href="#diary">Дневник</a><a href="#method">Методика</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow"><i></i> ИССЛЕДОВАТЕЛЬСКИЙ ВЕБ-ПРОЕКТ</div>
+    <h1>Верни себе<br><em>фокус внимания.</em></h1>
+    <p>Интерактивный сайт для изучения цифровых привычек, самопроверки концентрации и организации учебного времени.</p>
+    <div class="hero-buttons"><a class="btn btn-primary" href="#test">Проверить внимание <span>↗</span></a><a class="link" href="#project">Узнать о проекте ↓</a></div>
+    <div class="hero-foot"><span class="live-dot"></span> Инструменты доступны прямо в браузере</div>
+  </div>
+  <div class="hero-visual">
+    <div class="visual-glow"></div>
+    <div class="dashboard-card">
+      <div class="dash-top"><span>FOCUS SESSION</span><span class="dash-live">● ACTIVE</span></div>
+      <div class="ring"><div><strong>25:00</strong><small>ВРЕМЯ ФОКУСА</small></div></div>
+      <div class="dash-bars"><span style="height:30%"></span><span style="height:52%"></span><span style="height:42%"></span><span style="height:75%"></span><span style="height:60%"></span><span style="height:92%"></span><span style="height:70%"></span></div>
+      <div class="dash-bottom"><span>Меньше отвлечений</span><b>Больше результата ↗</b></div>
+    </div>
+    <div class="float-chip chip-one">◉ Осознанность</div><div class="float-chip chip-two">✦ Продуктивность</div>
+  </div>
+</section>
+
+<div class="quick-stats">
+  <div><strong>01</strong><span>исследовательская тема</span></div>
+  <div><strong>03</strong><span>интерактивных инструмента</span></div>
+  <div><strong>100%</strong><span>работает локально в браузере</span></div>
+</div>
+
+<section class="section" id="project">
+  <div class="kicker">01 / ИССЛЕДОВАТЕЛЬСКАЯ ЧАСТЬ</div>
+  <div class="section-head"><h2>О чём этот проект?</h2><p>Смартфоны дают быстрый доступ к информации, но уведомления и частое переключение между приложениями могут мешать учебной деятельности. FocusLab помогает наблюдать за собственными привычками и собирать данные для учебного исследования.</p></div>
+  <div class="feature-grid">
+    <article class="feature"><span class="feature-icon">⌁</span><h3>Актуальность</h3><p>Цифровые устройства постоянно присутствуют в жизни студентов. Изучение привычек помогает осознаннее организовывать занятия.</p></article>
+    <article class="feature"><span class="feature-icon">◎</span><h3>Цель</h3><p>Разработать веб-сайт с инструментами самопроверки внимания и учёта учебных сессий.</p></article>
+    <article class="feature"><span class="feature-icon">↗</span><h3>Гипотеза</h3><p>Снижение количества отвлечений во время занятий может сопровождаться улучшением субъективной оценки концентрации.</p></article>
+  </div>
+  <div class="project-meta">
+    <div><span>Объект исследования</span><b>Учебная деятельность студентов</b></div>
+    <div><span>Предмет исследования</span><b>Цифровые привычки и концентрация</b></div>
+    <div><span>Практический результат</span><b>Интерактивный веб-сайт FocusLab</b></div>
+  </div>
+</section>
+
+<section class="section test-section" id="test">
+  <div class="kicker">02 / ИНТЕРАКТИВНЫЙ ИНСТРУМЕНТ</div>
+  <div class="section-head"><h2>Самооценка концентрации</h2><p>Ответь на вопросы о своих привычках. Сайт рассчитает ориентировочный индекс по твоим ответам. Это не медицинский и не психологический диагноз.</p></div>
+  <div class="tool-card">
+    <div class="tool-heading"><div><span class="mini-label">МИНИ-ОПРОС</span><h3>Как проходит твоя учёба?</h3></div><span class="step-count" id="testProgress">0 / 4</span></div>
+    <form id="focusTest">
+      <label>1. Как часто ты отвлекаешься на уведомления во время занятий?
+        <select name="notifications" required><option value="">Выбери ответ</option><option value="3">Почти никогда</option><option value="2">Иногда</option><option value="1">Часто</option><option value="0">Постоянно</option></select>
+      </label>
+      <label>2. Насколько легко тебе вернуться к задаче после отвлечения?
+        <select name="return" required><option value="">Выбери ответ</option><option value="3">Очень легко</option><option value="2">Скорее легко</option><option value="1">Скорее трудно</option><option value="0">Очень трудно</option></select>
+      </label>
+      <label>3. Как долго обычно удаётся заниматься без проверки телефона?
+        <select name="duration" required><option value="">Выбери ответ</option><option value="3">Более 40 минут</option><option value="2">20–40 минут</option><option value="1">10–20 минут</option><option value="0">Менее 10 минут</option></select>
+      </label>
+      <label>4. Насколько хорошо ты обычно сосредоточен(а) на учебной задаче?
+        <select name="selfFocus" required><option value="">Выбери ответ</option><option value="3">Очень хорошо</option><option value="2">В целом хорошо</option><option value="1">Не очень хорошо</option><option value="0">Плохо</option></select>
+      </label>
+      <div class="form-actions"><button class="btn btn-primary" type="submit">Получить результат <span>→</span></button><button class="btn btn-quiet" type="reset">Очистить</button></div>
+    </form>
+    <div class="test-result" id="testResult" hidden aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="section focus-section" id="focus">
+  <div class="kicker light-kicker">03 / ИНСТРУМЕНТ ПРОДУКТИВНОСТИ</div>
+  <div class="section-head light-head"><h2>Фокус-сессия</h2><p>Используй таймер, чтобы выделить отдельный промежуток времени на одну задачу. Выбери режим и начни занятие.</p></div>
+  <div class="timer-layout">
+    <div class="timer-card">
+      <div class="timer-tabs"><button class="mode active" data-minutes="25">Фокус · 25 мин</button><button class="mode" data-minutes="5">Перерыв · 5 мин</button><button class="mode" data-minutes="15">Длинный · 15 мин</button></div>
+      <div class="timer-display" id="timerDisplay">25:00</div>
+      <div class="timer-caption" id="timerCaption">ВРЕМЯ СОСРЕДОТОЧИТЬСЯ</div>
+      <div class="timer-controls"><button class="btn btn-primary" id="startTimer">Начать</button><button class="btn btn-quiet" id="resetTimer">Сбросить</button></div>
+      <div class="timer-hint" id="timerHint">Выбери задачу и убери лишние отвлечения.</div>
+    </div>
+    <div class="focus-side"><div class="side-number">01</div><h3>Одна задача за раз</h3><p>Перед запуском таймера сформулируй одну конкретную задачу. По возможности отключи необязательные уведомления.</p><div class="side-number">02</div><h3>Запиши результат</h3><p>После занятия добавь завершённую сессию в дневник. Так ты сможешь отслеживать собственную активность.</p></div>
+  </div>
+</section>
+
+<section class="section" id="diary">
+  <div class="kicker">04 / ЛИЧНАЯ СТАТИСТИКА</div>
+  <div class="section-head"><h2>Дневник занятий</h2><p>Добавляй учебные сессии вручную или сохраняй завершённые таймеры. Данные хранятся в браузере на этом устройстве.</p></div>
+  <div class="diary-grid">
+    <form class="entry-card" id="sessionForm">
+      <span class="mini-label">НОВАЯ ЗАПИСЬ</span><h3>Добавить занятие</h3>
+      <label>Название задачи<input name="task" maxlength="70" placeholder="Например, подготовка к экзамену" required></label>
+      <label>Продолжительность, минут<input name="minutes" type="number" min="1" max="600" value="25" required></label>
+      <label>Оценка концентрации<select name="rating" required><option value="5">5 — отлично</option><option value="4">4 — хорошо</option><option value="3">3 — нормально</option><option value="2">2 — трудно</option><option value="1">1 — почти не удалось</option></select></label>
+      <button class="btn btn-primary full" type="submit">Сохранить занятие +</button>
+    </form>
+    <div class="history-card">
+      <div class="history-head"><div><span class="mini-label">ТВОЯ АКТИВНОСТЬ</span><h3>История занятий</h3></div><button id="clearHistory" class="clear-btn" type="button">Очистить</button></div>
+      <div class="summary-row"><div><span>Всего минут</span><strong id="totalMinutes">0</strong></div><div><span>Занятий</span><strong id="totalSessions">0</strong></div><div><span>Средняя оценка</span><strong id="averageRating">—</strong></div></div>
+      <div id="sessionList" class="session-list"><p class="empty-state">Пока нет записей. Добавь первое занятие.</p></div>
+      <div class="history-footer"><button class="btn btn-quiet" id="exportData" type="button">Экспортировать данные CSV ↓</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="section method-section" id="method">
+  <div class="kicker">05 / МЕТОДИКА И ОГРАНИЧЕНИЯ</div>
+  <div class="section-head"><h2>Как использовать результаты?</h2><p>Сайт является техническим инструментом для сбора самооценок и учёта занятий. Его показатели помогают описывать наблюдения, но не доказывают, что смартфон напрямую вызывает снижение внимания.</p></div>
+  <div class="method-grid">
+    <div><b>01</b><h3>Собери данные</h3><p>Предложи участникам пройти самооценку и использовать дневник в течение выбранного периода.</p></div>
+    <div><b>02</b><h3>Сравни наблюдения</h3><p>Сопоставь ответы и записи до и после периода осознанного ограничения отвлечений.</p></div>
+    <div><b>03</b><h3>Сформулируй вывод</h3><p>Укажи число участников, период наблюдения, результаты и ограничения выборки.</p></div>
+  </div>
+  <div class="notice"><strong>Ограничение данных</strong><p>В текущей версии записи сохраняются только в локальном хранилище браузера (localStorage). Они не передаются автору сайта и не объединяются с данными других посетителей. Для общего сбора результатов нужно подключить отдельный сервис форм или базу данных.</p></div>
+</section>
+
+<section class="closing"><div class="kicker light-kicker">FOCUSLAB / 2026</div><h2>Меньше отвлечений.<br><em>Больше осознанности.</em></h2><p>Небольшие изменения привычек можно начать с наблюдения за собой.</p><a class="btn btn-light" href="#test">Пройти самооценку ↗</a></section>
+</main>
+<footer class="site-footer">
+  <div class="footer-brand"><a class="logo" href="#home"><span class="logo-mark">F</span> Focus<span>Lab</span></a><p>Учебный исследовательский веб-проект · 2026</p></div>
+  <div class="footer-author"><span class="author-label">АВТОР ПРОЕКТА</span><strong>Васенева Дарья Максимовна</strong><span class="author-caption">Разработка и исследование</span></div>
+  <a class="back-top" href="#home">Наверх <span>↑</span></a>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
